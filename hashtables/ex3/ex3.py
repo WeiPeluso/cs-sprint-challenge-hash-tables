@@ -4,6 +4,19 @@ def intersection(arrays):
     """
     # Your code here
 
+    insec_table = {}
+    result = []
+    for array in arrays:
+        for number in array:
+            if number not in insec_table:
+                insec_table[number] = 1
+            else:
+                insec_table[number] += 1
+
+    for number in insec_table:
+        if insec_table[number] > 1:
+            result.append(number)
+
     return result
 
 

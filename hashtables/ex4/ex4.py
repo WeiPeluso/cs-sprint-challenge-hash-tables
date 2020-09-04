@@ -3,7 +3,14 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
+    number_table = {}
+    result = []
 
+    for number in a:
+        if abs(number) in number_table:
+            result.append(abs(number))
+        else:
+            number_table[abs(number)] = abs(number)
     return result
 
 
